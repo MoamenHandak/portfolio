@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Moamen Handak — Front-end developer based in Mansoura, Egypt. Portfolio & projects." />
+  <meta name="author" content="Moamen Handak">
+  <meta name="theme-color" content="#0b0f0d">
+  <title>Portfolio — Moamen Handak</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <canvas id="background" aria-hidden="true"></canvas>
+  
+  <header>
+    <div class="logo">Moamen</div>
+    <nav aria-label="Primary navigation">
+      <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu"><i class="fa fa-bars"></i></button>
+      <ul id="primary-nav" class="nav-list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <button id="themeToggle" class="btn" aria-pressed="false" title="Toggle light / dark"> <i class="fa fa-sun"></i></button>
+      <a class="resume-btn" href="resmue/cv.pdf" target="_blank" rel="noopener" download><span class="glow">⬇</span> Download Resume</a>
+    </div>
+  </header>
+  <main>
+    <section id="about" class="container" aria-labelledby="about-heading">
+      <div class="hero about-card" role="region" aria-labelledby="about-heading">
+        <div>
+          <h1 id="about-heading">Hi, I’m Moamen Handak</h1>
+          <div class="role">Front‑end Web Developer • React & Modern JS</div>
+          <div class="typewriter" aria-hidden="false"><span id="typeText"></span></div>
+
+          <p style="color:var(--muted);margin-top:14px;">I build clean, accessible and responsive user interfaces. I enjoy converting ideas into polished experiences and learning new tools every day.</p>
+
+          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn primary" href="#projects">See Projects</a>
+            <a class="btn" href="mailto:moamen@example.com">Contact Me</a>
+          </div>
+        </div>
+
+        <aside aria-label="Profile picture" class="pfp" style="margin-left:auto">
+          <img src="imgs/pfp.jpg" alt="Portrait photo of Moamen Handak" width="220" height="220">
+        </aside>
+      </div>
+    </section>
+    <section id="education" class="container" aria-labelledby="education-heading">
+      <h2 id="education-heading" style="color:var(--accent);margin-bottom:12px">Education</h2>
+      <div class="about-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+          <div>
+            <strong>Level 3 — Computer Science & Software Engineering</strong>
+            <div style="color:var(--muted);margin-top:6px">Grade: Very Good • M.E.T University</div>
+          </div>
+          <div style="color:var(--muted)">Sep 2023 – Present</div>
+        </div>
+      </div>
+    </section>
+    <section id="certifications" class="container" aria-labelledby="certifications-heading">
+      <h2 id="certifications-heading" style="color:var(--accent);margin-bottom:12px">Certifications</h2>
+      <div class="about-card">
+        <p style="color:var(--muted)">No certifications available yet — you can add industry certificates (e.g. freeCodeCamp, Coursera, Google) here when ready.</p>
+      </div>
+    </section>
+    <section id="skills" class="container" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" style="color:var(--accent);margin-bottom:12px">Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill" data-percent="92">
+          <div class="label"><span>HTML</span><span aria-hidden="true">92%</span></div>
+          <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+        </div>
+
+        <div class="skill" data-percent="88">
+          <div class="label"><span>CSS</span><span aria-hidden="true">88%</span></div>
+          <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+        </div>
+
+        <div class="skill" data-percent="80">
+          <div class="label"><span>JavaScript</span><span aria-hidden="true">80%</span></div>
+          <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+        </div>
+
+        <div class="skill" data-percent="74">
+          <div class="label"><span>React</span><span aria-hidden="true">74%</span></div>
+          <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects" class="container" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" style="color:var(--accent);margin-bottom:12px">Projects</h2>
+
+      <div class="projects">
+        <article class="project" aria-labelledby="proj1">
+          <h3 id="proj1">Video Downloader</h3>
+          <p>Python + yt-dlp — a clean GUI that supports many qualities and formats.</p>
+          <div class="project-actions">
+            <button class="btn" data-video="previews/video downloader.mp4">Play preview</button>
+            <a class="btn" href="https://github.com/MoamenHandak" target="_blank" rel="noopener">View code</a>
+          </div>
+          <div class="preview"><video src="previews/video downloader.mp4" autoplay muted loop playsinline></video></div>
+        </article>
+
+        <article class="project" aria-labelledby="proj2">
+          <h3 id="proj2">Factory Management System</h3>
+          <p>C# WinForms app for inventory and production scheduling.</p>
+          <div class="project-actions">
+            <button class="btn" data-video="previews/factory.mp4">Play preview</button>
+            <a class="btn" href="#">Screenshots</a>
+          </div>
+          <div class="preview"><video src="previews/factory.mp4" autoplay muted loop playsinline></video></div>
+        </article>
+
+        <article class="project" aria-labelledby="proj3">
+          <h3 id="proj3">An online sports store</h3>
+          <p>A website to sell sports products.</p>
+          <div class="project-actions">
+            <button class="btn" data-video="previews/sports store.mp4">Play preview</button>
+            <a class="btn" href="#">Screenshots</a>
+          </div>
+          <div class="preview"><video src="previews/sports store.mp4" autoplay muted loop playsinline></video></div>
+        </article>
+
+        <article class="project" aria-labelledby="proj4">
+          <h3 id="proj2">A programming ccompany website</h3>
+          <p>A responsive website for a programming company.</p>
+          <div class="project-actions">
+            <button class="btn" data-video="previews/company.mp4">Play preview</button>
+            <a class="btn" href="#">Screenshots</a>
+          </div>
+          <div class="preview"><video src="previews/company.mp4" autoplay muted loop playsinline></video></div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contact" class="container" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" style="color:var(--accent);margin-bottom:12px">Contact</h2>
+      <div class="about-card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div>
+          <p style="color:var(--muted)">You can reach me on social platforms or send an email.</p>
+          <div class="socials" style="margin-top:10px">
+            <a href="https://www.facebook.com/moamen.handak.2025" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/m04m32/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/moamenhandak/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            <a href="http://wa.me/+20-01281022882" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/MoamenHandak" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <form style="min-width:260px;max-width:420px;display:flex;flex-direction:column;gap:8px" action="mailto:moamenhandak@gmail.com" method="post" encType="text/plain">
+          <label class="sr-only" for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)" required>
+          <input id="email" name="email" type="email" placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)" required>
+          <textarea id="message" name="message" placeholder="Message" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)"></textarea>
+          <button class="btn primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="resume" class="container" aria-labelledby="resume-heading">
+      <h2 id="resume-heading" style="color:var(--accent);margin-bottom:12px">Resume</h2>
+      <p style="color:var(--muted)">Download my resume <a href="resume/cv.pdf" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">here</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>&copy; <span id="year"></span> Moamen Handak — Built with care.</div>
+  </footer>
+
+  <!-- Video modal -->
+  <div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="close" id="closeModal" aria-label="Close video">✕</button>
+    <div class="frame" role="document">
+      <video id="fullVideo" controls playsinline></video>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
